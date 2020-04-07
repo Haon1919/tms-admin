@@ -4,16 +4,18 @@ import React, { useState } from 'react';
 //Pages
 import { Route, Switch } from 'react-router';
 
+import { Header } from './components/Header';
+
 
 const App: React.FC = () => {
 
   return (
-      <div>
-        <h1>Hello world</h1>
-        <Switch>
+    <section>
+      <Header />
+      <Switch>
 
-        </Switch>
-      </div>
+      </Switch>
+    </section>
   );
 }
 
