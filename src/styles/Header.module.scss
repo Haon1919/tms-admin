@@ -13,6 +13,10 @@
   justify-content: center;
 }
 
+.selected_page {
+  font-size: 1.5em;
+}
+
 .title a {
   outline: 0;
   border: none;
@@ -28,6 +32,15 @@ a {
 .menu a {
   display: block;
   text-align: center;
+  font-size: 2em;
+  transition-property: font-size, font-weight;
+  transition-duration: .5s;
+}
+
+//Do not move 
+.menu .active {
+  font-weight: bold;
+  font-size: 3em;
 }
 
 .menu {
@@ -37,7 +50,6 @@ a {
 
 .menu li {
   margin-bottom: 33%;
-  font-size: 2em;
 }
 
 li,
@@ -132,18 +144,4 @@ ul {
 
 .hamburger.menu_open .middle_bar {
   transform: scale(0);
-}
-
-//Hover event for hamburger menu desktop
-//change this color
-.hamburger:hover:before {
-  background-color: rgb(10, 221, 240);
-}
-
-.hamburger:hover:after {
-  background-color: rgb(10, 221, 240);
-}
-
-.hamburger:hover div {
-  background-color: rgb(10, 221, 240);
 }

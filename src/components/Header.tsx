@@ -1,13 +1,16 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { NavLink, useLocation, Link } from 'react-router-dom';
 import styles from '../styles/Header.module.scss';
 
 export const Header: React.FC = () => {
     const [toggleMenu, setToggleMenu] = useState(false);
 
-    const location = useLocation();
+    const { pathname } = useLocation();
 
-    useEffect(() => setToggleMenu(false), [location]);
+    useEffect(() => {
+        setToggleMenu(false)
+    }, [pathname]);
+
 
     return (
         <section className={styles.header} id="header">
@@ -27,40 +30,22 @@ export const Header: React.FC = () => {
             <div className={toggleMenu ? `${styles.menu_pane} ${styles.menu_open}` : styles.menu_pane}>
                 <ul className={styles.menu}>
                     <li>
-                        <Link to="/">Landing</Link>
+                        <NavLink exact to="/" activeClassName={styles.active}>Landing</NavLink>
                     </li>
                     <li>
-                        <Link to="/Contact">Contact</Link>
+                        <NavLink to="/Contact" activeClassName={styles.active}>Contact</NavLink>
                     </li>
                     <li>
-                        <Link to="/Blog">Blog</Link>
+                        <NavLink to="/Blog" activeClassName={styles.active}>Blog</NavLink>
                     </li>
                     <li>
-                        <Link to="/About">About</Link>
+                        <NavLink to="/About" activeClassName={styles.active}>About</NavLink>
                     </li>
                     <li>
-                        <Link to="/Resources">Resources</Link>
+                        <NavLink to="/Resources" activeClassName={styles.active}>Resources</NavLink>
                     </li>
                     <li>
-                        <Link to="/Services">Services</Link>
-                    </li>
-                    <li>
-                        <Link to="/">Landing</Link>
-                    </li>
-                    <li>
-                        <Link to="/Contact">Contact</Link>
-                    </li>
-                    <li>
-                        <Link to="/Blog">Blog</Link>
-                    </li>
-                    <li>
-                        <Link to="/About">About</Link>
-                    </li>
-                    <li>
-                        <Link to="/Resources">Resources</Link>
-                    </li>
-                    <li>
-                        <Link to="/Services">Services</Link>
+                        <NavLink to="/Services" activeClassName={styles.active}>Services</NavLink>
                     </li>
                 </ul>
                 <div
