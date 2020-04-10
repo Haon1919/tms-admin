@@ -10,7 +10,7 @@ export const Header: React.FC = () => {
     useEffect(() => setToggleMenu(false), [location]);
 
     return (
-        <section className={styles.header} id = "header">
+        <section className={styles.header} id="header">
             <section className={styles.banner}>
                 <div className={styles.hamburger_wrapper}>
                     <div
@@ -26,27 +26,41 @@ export const Header: React.FC = () => {
             </section>
             <div className={toggleMenu ? `${styles.menu_pane} ${styles.menu_open}` : styles.menu_pane}>
                 <ul className={styles.menu}>
-                    <li className={`${styles.open} ${styles.general}`}>
-                        <ul>
-                            <li>
-                                <Link to="/">Landing</Link>
-                            </li>
-                            <li>
-                                <Link to="/Contact">Contact</Link>
-                            </li>
-                            <li>
-                                <Link to="/Blog">Blog</Link>
-                            </li>
-                            <li>
-                                <Link to="/About">About</Link>
-                            </li>
-                            <li>
-                                <Link to="/Resources">Resources</Link>
-                            </li>
-                            <li>
-                                <Link to="/Services">Services</Link>
-                            </li>
-                        </ul>
+                    <li>
+                        <Link to="/">Landing</Link>
+                    </li>
+                    <li>
+                        <Link to="/Contact">Contact</Link>
+                    </li>
+                    <li>
+                        <Link to="/Blog">Blog</Link>
+                    </li>
+                    <li>
+                        <Link to="/About">About</Link>
+                    </li>
+                    <li>
+                        <Link to="/Resources">Resources</Link>
+                    </li>
+                    <li>
+                        <Link to="/Services">Services</Link>
+                    </li>
+                    <li>
+                        <Link to="/">Landing</Link>
+                    </li>
+                    <li>
+                        <Link to="/Contact">Contact</Link>
+                    </li>
+                    <li>
+                        <Link to="/Blog">Blog</Link>
+                    </li>
+                    <li>
+                        <Link to="/About">About</Link>
+                    </li>
+                    <li>
+                        <Link to="/Resources">Resources</Link>
+                    </li>
+                    <li>
+                        <Link to="/Services">Services</Link>
                     </li>
                 </ul>
                 <div
