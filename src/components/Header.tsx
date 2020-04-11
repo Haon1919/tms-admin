@@ -29,23 +29,32 @@ export const Header: React.FC = () => {
             </section>
             <div className={toggleMenu ? `${styles.menu_pane} ${styles.menu_open}` : styles.menu_pane}>
                 <ul className={styles.menu}>
-                    <li>
+                    <li className={styles.first_element}>
                         <NavLink exact to="/" activeClassName={styles.active}>Landing</NavLink>
                     </li>
                     <li>
-                        <NavLink to="/Contact" activeClassName={styles.active}>Contact</NavLink>
+                        <NavLink exact to="/Funds" activeClassName={styles.active}>Funds</NavLink>
                     </li>
                     <li>
-                        <NavLink to="/Blog" activeClassName={styles.active}>Blog</NavLink>
+                        <NavLink exact to="/Services" activeClassName={styles.active}>Services</NavLink>
                     </li>
                     <li>
-                        <NavLink to="/About" activeClassName={styles.active}>About</NavLink>
+                        <NavLink exact to="/Payments" activeClassName={styles.active}>Payments</NavLink>
                     </li>
                     <li>
-                        <NavLink to="/Resources" activeClassName={styles.active}>Resources</NavLink>
+                        <NavLink exact to="/Users" activeClassName={styles.active}>Users</NavLink>
                     </li>
                     <li>
-                        <NavLink to="/Services" activeClassName={styles.active}>Services</NavLink>
+                        <NavLink exact to="/Calendar" activeClassName={styles.active}>Calendar</NavLink>
+                    </li>
+                    <li>
+                        <NavLink exact to="/Rentals" activeClassName={styles.active}>Landing</NavLink>
+                    </li>
+                    <li>
+                        <NavLink exact to="/Blog" activeClassName={styles.active}>Blog</NavLink>
+                    </li>
+                    <li className={styles.last_element}>
+                        <NavLink exact to="/Charge" activeClassName={styles.active}>Charge</NavLink>
                     </li>
                 </ul>
                 <div
