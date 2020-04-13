@@ -1,0 +1,155 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  height: 10vh;
+  position: fixed;
+}
+
+.title {
+  width: 86vw;
+  translate: transform 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.selected_page {
+  font-size: 1.5em;
+}
+
+.title a {
+  outline: 0;
+  border: none;
+  outline-style: none;
+}
+
+a {
+  width: 100%;
+  text-decoration: none;
+  color: black;
+}
+
+.menu a {
+  display: block;
+  text-align: center;
+  font-size: 2em;
+  transition-property: font-size, font-weight;
+  transition-duration: .5s;
+}
+
+//Do not move 
+.menu .active {
+  font-weight: bold;
+  font-size: 3em;
+}
+
+.menu {
+  overflow: scroll;
+  height: 100vh;
+}
+
+.menu li {
+  margin-bottom: 20%;
+}
+
+li,
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.title a {
+  color: white;
+  font-size: 1.3em;
+  text-align: center;
+}
+
+.banner {
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(191, 191, 191);
+  height: 15vh;
+}
+
+.menu_pane {
+  transition: transform 0.2s ease-in-out;
+  transform: translateX(-100vw);
+  width: 100vw;
+  top: 10vh;
+  display: flex;
+  flex-direction: row;
+  z-index: 1;
+  height: 100vh;
+}
+
+.menu_pane a {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.menu_pane.menu_open {
+  transform: translateX(0vw);
+}
+
+.menu {
+  margin: 0;
+  width: 20%;
+  height: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.first_element {
+  margin-top: 20%;
+}
+
+.last_element {
+  padding-bottom: 20%;
+}
+
+.overlay {
+  opacity: 0;
+  background-color: black;
+  width: 80%;
+}
+
+.menu_open .overlay {
+  transition: opacity 0.5s ease-in-out;
+  opacity: 0.4;
+}
+
+//hamburger menu styles
+.hamburger {
+  margin-left: 42%;
+}
+.hamburger_wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 6%;
+}
+.hamburger:after,
+.hamburger:before,
+.hamburger .middle_bar {
+  background-color: rgb(241, 241, 241);
+  border-radius: 3px;
+  content: "";
+  display: block;
+  height: 5px;
+  margin: 7px 0;
+  transition: all 0.2s ease-in-out;
+  width: 2.5em;
+}
+
+.menu_open.hamburger:before {
+  transform: translateY(12px) rotate(135deg);
+}
+
+.menu_open.hamburger:after {
+  transform: translateY(-12px) rotate(-135deg);
+}
+
+.hamburger.menu_open .middle_bar {
+  transform: scale(0);
+}
