@@ -1,5 +1,6 @@
 {
   "name": "tms-admin",
+  "homepage": "http://ec2-18-191-217-99.us-east-2.compute.amazonaws.com/tms-admin/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
